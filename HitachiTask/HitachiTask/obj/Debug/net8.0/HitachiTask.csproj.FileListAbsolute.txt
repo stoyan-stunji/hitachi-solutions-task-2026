@@ -1,0 +1,15 @@
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/bin/Debug/net8.0/HitachiTask
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/bin/Debug/net8.0/HitachiTask.deps.json
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/bin/Debug/net8.0/HitachiTask.runtimeconfig.json
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/bin/Debug/net8.0/HitachiTask.dll
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/bin/Debug/net8.0/HitachiTask.pdb
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.GeneratedMSBuildEditorConfig.editorconfig
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.AssemblyInfoInputs.cache
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.AssemblyInfo.cs
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.csproj.CoreCompileInputs.cache
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.sourcelink.json
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.dll
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/refint/HitachiTask.dll
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.pdb
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/HitachiTask.genruntimeconfig.cache
+/home/nitro/Desktop/hitachi/hitachi/HitachiTask/HitachiTask/obj/Debug/net8.0/ref/HitachiTask.dll
