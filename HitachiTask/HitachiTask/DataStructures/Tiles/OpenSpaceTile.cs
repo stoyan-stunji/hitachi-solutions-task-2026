@@ -10,4 +10,6 @@ public sealed class OpenSpaceTile : Tile {
     public bool IsWalkable => true;
 
     public string Symbol => "0";
+    
+    public int MovementCost => 1;
 }

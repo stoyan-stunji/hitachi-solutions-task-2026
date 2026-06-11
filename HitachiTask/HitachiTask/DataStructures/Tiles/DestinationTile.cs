@@ -12,4 +12,6 @@ public sealed class DestinationTile : Tile {
     public bool IsWalkable => true;
 
     public string Symbol => "F";
+    
+    public int MovementCost => 1;
 }
