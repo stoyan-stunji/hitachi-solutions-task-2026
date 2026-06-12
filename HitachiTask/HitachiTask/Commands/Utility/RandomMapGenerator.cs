@@ -22,10 +22,6 @@ public sealed class RandomMapGenerator {
     }
     
     private static void ValidateInput(int astronautsCount, int rows, int cols, int asteroidsCount, int debrisCount) {
-        if (astronautsCount < 1 || astronautsCount > 3) {
-            throw new ArgumentException("RandomMapGenerator::ValidateInput()::Astronauts must be between 1 and 3!");
-        }
-
         int totalNeeded = 1 + astronautsCount + asteroidsCount + debrisCount;
         if (totalNeeded > rows * cols) {
             throw new ArgumentException("RandomMapGenerator::ValidateInput()::Not enough space on the grid!");
