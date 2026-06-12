@@ -1,11 +1,13 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class OpenSpaceTile : Tile {
     public OpenSpaceTile(Position position) {
         Position = position;
     }
 
-    public Position Position { get; }
+    public Position Position {
+        get;
+    }
 
     public bool IsWalkable => true;
 

@@ -1,4 +1,6 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+
+namespace HitachiTask.Commands.Utility;
 public sealed class MapContext {
     public Grid Grid {
         get; 

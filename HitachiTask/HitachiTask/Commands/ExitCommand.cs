@@ -1,7 +1,7 @@
-namespace HitachiTask;
+namespace HitachiTask.Commands;
 
-public sealed class ExitCommand : MapCommand {
-    public MapContext Execute() {
-        return null!;
+public sealed class ExitCommand : Command {
+    public void Execute() {
+        Environment.Exit(0);
     }
 }

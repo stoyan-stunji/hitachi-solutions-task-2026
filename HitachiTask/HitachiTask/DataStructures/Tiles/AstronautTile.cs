@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class AstronautTile : Tile {
     public AstronautTile(Position position, string astronautName) {

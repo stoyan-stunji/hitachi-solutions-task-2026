@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class AsteroidTile : Tile {
     public AsteroidTile(Position position) {

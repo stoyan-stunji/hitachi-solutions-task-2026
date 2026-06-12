@@ -1,4 +1,7 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+using HitachiTask.Dto.Mission;
+
+namespace HitachiTask.Service.Mission;
 
 public sealed class MissionPrinter {
     public void Print(Grid grid, List<MissionResultDto> results) {
@@ -7,18 +10,17 @@ public sealed class MissionPrinter {
     }
 
     private static void PrintFailures(List<MissionResultDto> results) {
-        foreach (var failed in results.Where(r => !r.PathResultDto.Found)) {
-            Console.WriteLine($"Mission failed — Astronaut {failed.Astronaut.Name} lost in space!");
+        foreach (MissionResultDto failed in results.Where(r => !r.PathResultDto.Found)) {
+            Console.WriteLine($"\nMission failed - Astronaut {failed.Astronaut.Name} lost in space!");
         }
     }
 
     private static void PrintSuccesses(Grid grid, List<MissionResultDto> results) {
-        foreach (var success in results
+        foreach (MissionResultDto success in results
                      .Where(r => r.PathResultDto.Found)
                      .OrderBy(r => r.PathResultDto.Distance)) {
-            Console.WriteLine($"Astronaut {success.Astronaut.Name} - Shortest path: {success.PathResultDto.Distance}");
+            Console.WriteLine($"\nAstronaut {success.Astronaut.Name} - Shortest path: {success.PathResultDto.Distance}");
             MapPrinter.Print(grid, success.PathResultDto.Path);
-            Console.WriteLine();
         }
     }
 }

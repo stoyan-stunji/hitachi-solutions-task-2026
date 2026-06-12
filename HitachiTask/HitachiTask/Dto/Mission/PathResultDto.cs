@@ -1,4 +1,6 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+
+namespace HitachiTask.Dto.Mission;
 
 public sealed class PathResultDto {
     public bool Found {

@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class DestinationTile : Tile {
     public DestinationTile(Position position) {

@@ -1,18 +1,17 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+using HitachiTask.DataStructures.Tiles;
+using HitachiTask.Dto.Mission;
 
-public sealed class DijkstraStrategy : SSSPStrategy
-{
-    private static readonly Position[] Directions = {
-        new(-1, 0), 
-        new(1, 0),  
-        new(0, -1), 
-        new(0, 1)   
-    };
+namespace HitachiTask.PathFinding;
+
+public sealed class DijkstraStrategy : SSSPStrategy {
+    private static readonly Position[] Directions = { new(-1, 0), new(1, 0),  
+        new(0, -1), new(0, 1) };
 
     public PathResultDto FindPath(Grid grid, Position source, Position destination) {
-        var pq = new PriorityQueue<Position, int>();
-        var distance = new Dictionary<Position, int>();
-        var parent = new Dictionary<Position, Position>();
+        PriorityQueue<Position, int> pq = new PriorityQueue<Position, int>();
+        Dictionary<Position, int> distance = new Dictionary<Position, int>();
+        Dictionary<Position, Position> parent = new Dictionary<Position, Position>();
 
         Initialize(source, pq, distance);
         while (pq.Count > 0) {
@@ -38,7 +37,7 @@ public sealed class DijkstraStrategy : SSSPStrategy
 
     private void ProcessNeighbors(Position current, Grid grid, PriorityQueue<Position, int> pq,
         Dictionary<Position, int> distance, Dictionary<Position, Position> parent) {
-        foreach (var dir in Directions) {
+        foreach (Position dir in Directions) {
             Position next = new(current.Row + dir.Row, current.Col + dir.Col);
             if (!grid.IsInside(next)) {
                 continue;
@@ -77,8 +76,8 @@ public sealed class DijkstraStrategy : SSSPStrategy
     
     private static List<Position> ReconstructPath(Position source, Position destination, 
         Dictionary<Position, Position> parent) {
-        var path = new List<Position>();
-        var current = destination;
+        List<Position> path = new List<Position>();
+        Position current = destination;
 
         path.Add(current);
 

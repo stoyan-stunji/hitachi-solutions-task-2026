@@ -1,7 +1,10 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+using HitachiTask.DataStructures.Tiles;
+
+namespace HitachiTask.Commands.Utility;
 
 public sealed class RandomMapGenerator {
-    private readonly Random random = new();
+    private readonly Random _random = new();
     public MapContext Generate(int rows, int cols, int astronautsCount, int asteroidsCount, int debrisCount) {
         ValidateInput(astronautsCount, rows, cols, asteroidsCount, debrisCount);
 
@@ -40,7 +43,7 @@ public sealed class RandomMapGenerator {
     }
     
     private Position TakeRandomCell(List<Position> freeCells) {
-        int index = random.Next(freeCells.Count);
+        int index = _random.Next(freeCells.Count);
         Position position = freeCells[index];
         freeCells.RemoveAt(index);
         return position;

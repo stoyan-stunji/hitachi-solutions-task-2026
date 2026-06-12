@@ -1,24 +1,37 @@
-namespace HitachiTask;
+using HitachiTask.Commands.Utility;
 
-public sealed class InputCustomMapCommand : MapCommand
-{
-    private readonly MapParser parser;
-    public InputCustomMapCommand(MapParser parser) {
-        this.parser = parser;
-    }
+namespace HitachiTask.Commands;
 
-    public MapContext Execute() {
-        Console.Write("Rows: ");
+public sealed class InputCustomMapCommand(SpaceNavigationApp app, MapParser mapParser) : Command {
+    public void Execute() {
+        Console.Write("Input Number Of Rows: ");
         int rows = int.Parse(Console.ReadLine()!);
-        
-        Console.Write("Cols: ");
-        int cols = int.Parse(Console.ReadLine()!);
+        ValidateRows(rows);
 
+        Console.Write("Input Number Of Cols: ");
+        int cols = int.Parse(Console.ReadLine()!);
+        ValidateCols(cols);
+        
+        Console.Write("Input Cosmic Map: \n");
         List<string> lines = new();
-        for (int i = 0; i < rows; i++) {
+        for (int i = 0; i < rows; i++)
+        {
             lines.Add(Console.ReadLine()!);
         }
 
-        return parser.Parse(rows, cols, lines);
+        MapContext context = mapParser.Parse(rows, cols, lines);
+        app.SetContext(context);
+    }
+
+    private static void ValidateRows(int rows) {
+        if (rows < MapConstraints.MinRows || rows > MapConstraints.MaxRows) {
+            throw new ArgumentException("InputCustomMapCommand::ValidateRows()::Rows must be in range [2,100]!");
+        }
+    }
+
+    private static void ValidateCols(int cols) {
+        if (cols < MapConstraints.MinCols || cols > MapConstraints.MaxCols) {
+            throw new ArgumentException("InputCustomMapCommand::ValidateCols()::Cols must be in range [2,100]!");
+        }
     }
 }
