@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class AsteroidTile : Tile {
     public AsteroidTile(Position position) {
@@ -9,4 +9,6 @@ public sealed class AsteroidTile : Tile {
     public bool IsWalkable => false;
 
     public string Symbol => "X";
+    
+    public int MovementCost => int.MaxValue;
 }

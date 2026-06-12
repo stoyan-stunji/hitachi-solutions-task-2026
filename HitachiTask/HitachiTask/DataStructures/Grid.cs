@@ -1,4 +1,6 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures.Tiles;
+
+namespace HitachiTask.DataStructures;
 
 public sealed class Grid {
     public Grid(Tile[,] tiles, Position destination) {

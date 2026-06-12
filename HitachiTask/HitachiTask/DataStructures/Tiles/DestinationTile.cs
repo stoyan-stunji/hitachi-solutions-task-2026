@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures.Tiles;
 
 public sealed class DestinationTile : Tile {
     public DestinationTile(Position position) {
@@ -12,4 +12,6 @@ public sealed class DestinationTile : Tile {
     public bool IsWalkable => true;
 
     public string Symbol => "F";
+    
+    public int MovementCost => 1;
 }

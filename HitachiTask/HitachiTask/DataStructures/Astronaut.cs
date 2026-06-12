@@ -1,4 +1,4 @@
-namespace HitachiTask;
+namespace HitachiTask.DataStructures;
 
 public sealed class Astronaut {
     public Astronaut(string name, Position startPosition) {

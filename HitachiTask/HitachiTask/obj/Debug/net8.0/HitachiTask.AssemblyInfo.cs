@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HitachiTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9c12a2fbf48f515282228fa621847f95406e4c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+166099e50c0b35c8c9cf920418760299256f9f3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("HitachiTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HitachiTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

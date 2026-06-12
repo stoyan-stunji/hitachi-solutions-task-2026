@@ -1,5 +1,7 @@
-namespace HitachiTask;
+using HitachiTask.DataStructures;
+using HitachiTask.Dto.Mission;
 
+namespace HitachiTask.PathFinding;
 public sealed class BellmanFordStrategy : SSSPStrategy {
     public PathResultDto FindPath(Grid grid, Position source, Position destination) {
         throw new NotImplementedException();
